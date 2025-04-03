@@ -5,3 +5,4 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     CONSTRAINT proper_username CHECK (username ~* '^[a-zA-Z0-9_]+$')
     CONSTRAINT username_length CHECK (char_length(username) > 3 and char_length(username) < 15)
 );
+
