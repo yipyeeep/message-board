@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     CONSTRAINT username_length CHECK (char_length(username) > 3 and char_length(username) < 15)
 );
 
-alter table <table name> enable row level security
+alter table <user_profiles> enable row level security;
