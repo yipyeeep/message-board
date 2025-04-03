@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     CONSTRAINT username_length CHECK (char_length(username) > 3 and char_length(username) < 15)
 );
 
-alter table <user_profiles> enable row level security;
+alter table user_profiles enable row level security;
 
 CREATE POLICY "all can see" ON "public"."user_profiles"
 AS PERMISSIVE FOR SELECT
