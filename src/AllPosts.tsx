@@ -9,7 +9,7 @@ import { timeAgo } from "./time-ago";
 import { UpVote } from "./UpVote";
 import { usePostScore } from "./use-post-score";
 
-export default function AllPosts() {
+export function AllPosts() {
   const { session } = useContext(UserContext);
   const { pageNumber } = useParams();
   const [bumper, setBumper] = useState(0);
