@@ -26,8 +26,8 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="nav-auth-item">
-            {session?.user ? <UserMenu /> : <Login />} // see a bit further down
-            for the UserMenu.tsx file!
+            {session?.user? <UserMenu /> : <Login /> /* see a bit further down for the UserMenu.tsx file!*/ }
+            
           </li>
         </ul>
       </nav>
