@@ -6,4 +6,4 @@ const supabaseKey = (import.meta as any).env.VITE_SUPABASE_ANON_KEY;
 
 export const supaClient = createClient<Database>(supabaseUrl, supabaseKey);
 
-supaClient.from('user_profiles').select('*').then(({ data }) => {})
+// supaClient.from('user_profiles').select('*').then(({ data }) => {})
