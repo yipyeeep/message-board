@@ -15,6 +15,7 @@ export interface SupashipUserInfo {
 }
 
 export function useSession(): SupashipUserInfo {
+  const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState<SupashipUserInfo>({
     profile: null,
     session: null,
@@ -46,7 +47,7 @@ export function useSession(): SupashipUserInfo {
   }, [userInfo.session]);
 
   async function listenToUserProfileChanges(userId: string) {
-    const navigate = useNavigate();
+    
     const { data } = await supaClient
       .from("user_profiles")
       .select("*")
